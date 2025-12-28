@@ -8,20 +8,20 @@ import os
 import secrets
 
 # Serveur
-SERVER_HOST = "0.0.0.0"
-SERVER_PORT = 8888
-SECRET_KEY = secrets.token_hex(32)
+SERVER_HOST = os.getenv("HOST", "0.0.0.0")
+SERVER_PORT = int(os.getenv("PORT", 8888))
+SECRET_KEY = os.getenv("SECRET_KEY", secrets.token_hex(32))
 
 # Base de donnees
-DATABASE_PATH = os.path.join(os.path.dirname(__file__), "database.db")
+DATABASE_PATH = os.getenv("DATABASE_PATH", os.path.join(os.path.dirname(__file__), "database.db"))
 
 # Token VAVOO
-TOKEN_REFRESH_INTERVAL = 900  # 15 minutes
+TOKEN_REFRESH_INTERVAL = int(os.getenv("TOKEN_REFRESH_INTERVAL", 900))  # 15 minutes
 
 # Super Admin (a changer!)
-SUPER_ADMIN_USERNAME = "superadmin"
-SUPER_ADMIN_PASSWORD = "Super@2024!"
-SUPER_ADMIN_EMAIL = "admin@iptv.local"
+SUPER_ADMIN_USERNAME = os.getenv("SUPER_ADMIN_USERNAME", "superadmin")
+SUPER_ADMIN_PASSWORD = os.getenv("SUPER_ADMIN_PASSWORD", "Super@2024!")
+SUPER_ADMIN_EMAIL = os.getenv("SUPER_ADMIN_EMAIL", "admin@iptv.local")
 
 # Types d'abonnements par defaut
 DEFAULT_SUBSCRIPTION_TYPES = [

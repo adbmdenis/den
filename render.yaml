@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: serveur-iptv
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PORT
+        value: 8888
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SUPER_ADMIN_USERNAME
+        value: superadmin
+      - key: SUPER_ADMIN_PASSWORD
+        value: Super@2024!
+      - key: SUPER_ADMIN_EMAIL
+        value: admin@iptv.local
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    disk:
+      name: iptv-data
+      mountPath: /opt/render/project/src
+      sizeGB: 1

@@ -2,10 +2,20 @@
 
 ## 🚀 Démarrage rapide
 
+### En local
 ```bash
 cd serveur_iptv
 python server.py
 ```
+
+### Sur Render (Production)
+Voir le guide complet dans [DEPLOY.md](DEPLOY.md)
+
+**Déploiement en 1 clic :**
+1. Poussez votre code sur GitHub
+2. Connectez votre dépôt à Render
+3. Render détecte automatiquement `render.yaml`
+4. Votre serveur est en ligne ! 🎉
 
 ## 📍 URLs
 
