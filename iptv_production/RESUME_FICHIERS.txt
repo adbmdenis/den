@@ -1,0 +1,112 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                  FICHIERS À RÉCUPÉRER POUR NOUVEAU PROJET            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📦 PACKAGE ZIP PRÊT À L'EMPLOI:
+   iptv_package_20251228.zip (0.04 MB)
+   → Contient TOUS les fichiers essentiels
+
+═══════════════════════════════════════════════════════════════════════
+
+🔴 FICHIERS ESSENTIELS (11 fichiers)
+
+   📄 PYTHON (6 fichiers):
+      ✅ server.py              - Serveur HTTP principal
+      ✅ config.py              - Configuration
+      ✅ database.py            - Base de données
+      ✅ admin_panel.py         - Interface admin
+      ✅ vavoo_service.py       - Service Vavoo
+      ✅ multi_service.py       - Multi-sources
+
+   ⚙️ CONFIGURATION (3 fichiers):
+      ✅ .env.example           - Template configuration
+      ✅ requirements.txt       - Dépendances Python
+      ✅ .gitignore            - Git ignore
+
+   🚀 SCRIPTS (2 fichiers):
+      ✅ start.bat             - Démarrage Windows
+      ✅ start.sh              - Démarrage Linux/Mac
+
+═══════════════════════════════════════════════════════════════════════
+
+🟡 FICHIERS UTILES (2 fichiers)
+
+   🛠️ UTILITAIRES:
+      ⚠️ reset_database.py     - Réinitialiser la DB
+      ⚠️ test_server.py        - Tester le serveur
+
+═══════════════════════════════════════════════════════════════════════
+
+❌ NE PAS RÉCUPÉRER
+
+   🗑️ TEMPORAIRES:
+      ❌ database.db                  - Base de données (sera recréée)
+      ❌ __pycache__/                 - Cache Python
+      ❌ fix_admin_panel*.py          - Scripts de correction
+      ❌ test_admin_buttons.py        - Tests spécifiques
+
+   📝 DOCUMENTATION SPÉCIFIQUE:
+      ❌ DIFFERENCES.md               - Différences projet
+      ❌ FIX_JAVASCRIPT_ERROR.md      - Doc correction
+      ❌ PROBLEME_RESOLU.md           - Doc résolution
+      ❌ START_HERE.txt               - Guide spécifique
+
+═══════════════════════════════════════════════════════════════════════
+
+🚀 MÉTHODES DE COPIE
+
+   1️⃣ PACKAGE ZIP (RECOMMANDÉ):
+      → Extraire iptv_package_20251228.zip
+
+   2️⃣ SCRIPT AUTOMATIQUE:
+      Windows: copier_fichiers_essentiels.bat
+      Linux:   ./copier_fichiers_essentiels.sh
+
+   3️⃣ COPIE MANUELLE:
+      Copier les 11 fichiers essentiels listés ci-dessus
+
+═══════════════════════════════════════════════════════════════════════
+
+📋 INSTALLATION RAPIDE
+
+   1. Extraire/Copier les fichiers
+   2. Créer .env:        copy .env.example .env
+   3. Éditer .env:       notepad .env
+   4. Installer deps:    pip install -r requirements.txt
+   5. Démarrer:          python server.py
+
+═══════════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION COMPLÈTE
+
+   📖 FICHIERS_A_RECUPERER.md    - Liste détaillée
+   📖 GUIDE_REUTILISATION.md     - Guide complet
+   📖 README.md                  - Documentation principale
+   📖 QUICKSTART.md              - Démarrage rapide
+
+═══════════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST
+
+   [ ] Fichiers copiés
+   [ ] .env créé et configuré
+   [ ] Dépendances installées
+   [ ] Mots de passe changés
+   [ ] Serveur démarre
+   [ ] Panel admin accessible
+
+═══════════════════════════════════════════════════════════════════════
+
+🎯 RÉSULTAT
+
+   Serveur IPTV complet avec:
+   ✅ 8873+ chaînes live
+   ✅ Panel admin
+   ✅ Gestion clients/abonnements
+   ✅ API Xtream Codes
+   ✅ Support IPTV Smarters Pro
+
+═══════════════════════════════════════════════════════════════════════
+
+Date: 28 décembre 2025
+Version: 1.0

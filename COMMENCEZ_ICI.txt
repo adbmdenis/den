@@ -1,0 +1,79 @@
+╔══════════════════════════════════════════════════════════════╗
+║                    COMMENCEZ ICI !                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 NOUVEAU PROJET CRÉÉ !
+
+Un nouveau dossier "iptv_production" a été créé avec un serveur
+IPTV complet optimisé pour le développement local.
+
+📂 DEUX PROJETS DISPONIBLES
+────────────────────────────
+
+1. serveur_iptv (ANCIEN)
+   → Pour Render / Production
+   → Déjà déployé sur https://iptv-0e41.onrender.com
+   → Lisez : LISEZ_MOI_DABORD.md
+
+2. iptv_production (NOUVEAU) ⭐
+   → Pour développement local
+   → Configuration facile
+   → Tests automatiques
+   → Lisez : iptv_production/START_HERE.txt
+
+🚀 DÉMARRAGE RAPIDE
+────────────────────
+
+POUR LE DÉVELOPPEMENT LOCAL (Recommandé) :
+
+1. Aller dans le nouveau dossier :
+   cd iptv_production
+
+2. Lire le guide :
+   Ouvrez : START_HERE.txt
+
+3. Démarrer :
+   python server.py
+
+4. Ouvrir :
+   http://localhost:8888/admin
+
+POUR RENDER (Production) :
+
+1. Lire le guide :
+   Ouvrez : LISEZ_MOI_DABORD.md
+
+2. Suivre les 5 étapes
+
+3. Tester :
+   https://iptv-0e41.onrender.com/admin
+
+📖 DOCUMENTATION
+─────────────────
+
+→ NOUVEAU_PROJET_CREE.md (Vue d'ensemble)
+→ RESUME_COMPLET.md (Résumé complet)
+
+Pour le projet local :
+→ iptv_production/START_HERE.txt
+→ iptv_production/QUICKSTART.md
+
+Pour Render :
+→ LISEZ_MOI_DABORD.md
+→ SOLUTION_COMPLETE.md
+
+🎯 RECOMMANDATION
+──────────────────
+
+Utilisez le NOUVEAU projet (iptv_production) pour :
+✅ Développement local
+✅ Tests et expérimentation
+✅ Apprentissage
+
+Utilisez l'ANCIEN projet (serveur_iptv) pour :
+✅ Production sur Render
+✅ Serveur en ligne
+
+╔══════════════════════════════════════════════════════════════╗
+║  Allez dans iptv_production et lisez START_HERE.txt ! 🚀    ║
+╚══════════════════════════════════════════════════════════════╝

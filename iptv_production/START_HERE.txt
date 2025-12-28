@@ -1,0 +1,68 @@
+╔══════════════════════════════════════════════════════════════╗
+║         SERVEUR IPTV PRODUCTION - COMMENCEZ ICI !           ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 NOUVEAU PROJET CRÉÉ !
+────────────────────────
+
+Un serveur IPTV complet a été créé dans ce dossier.
+
+🚀 DÉMARRAGE EN 3 ÉTAPES
+─────────────────────────
+
+ÉTAPE 1 : Installer les dépendances
+   pip install -r requirements.txt
+
+ÉTAPE 2 : Démarrer le serveur
+   Windows : Double-cliquez sur start.bat
+   Linux/Mac : ./start.sh
+   Ou : python server.py
+
+ÉTAPE 3 : Ouvrir le navigateur
+   👉 http://localhost:8888/admin
+
+🔐 IDENTIFIANTS PAR DÉFAUT
+───────────────────────────
+   Username: superadmin
+   Password: Super@2024!
+
+✨ FONCTIONNALITÉS
+──────────────────
+   ✅ 8900+ chaînes Live TV
+   ✅ Films et Séries VOD
+   ✅ Dashboard avec statistiques
+   ✅ Gestion des clients
+   ✅ Vente d'abonnements
+   ✅ Prolongation
+   ✅ Gestion des vendeurs
+   ✅ Rafraîchissement des chaînes
+   ✅ Historique et Logs
+   ✅ API Xtream Codes
+   ✅ Playlists M3U
+
+📖 DOCUMENTATION
+─────────────────
+   → QUICKSTART.md (Démarrage rapide)
+   → INSTRUCTIONS.md (Instructions complètes)
+   → README.md (Documentation principale)
+
+🧪 TESTS
+─────────
+   python test_server.py
+
+🔄 RÉINITIALISER
+─────────────────
+   python reset_database.py
+
+🎯 PROCHAINES ÉTAPES
+─────────────────────
+   1. Lisez QUICKSTART.md
+   2. Démarrez le serveur
+   3. Ouvrez http://localhost:8888/admin
+   4. Créez un client de test
+   5. Vendez un abonnement
+   6. Testez avec IPTV Smarters Pro
+
+╔══════════════════════════════════════════════════════════════╗
+║  Tout est prêt ! Démarrez avec : python server.py 🚀        ║
+╚══════════════════════════════════════════════════════════════╝

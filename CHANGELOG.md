@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.2.0] - Ajout du Rafraîchissement Manuel des Chaînes
+
+### Ajouté
+- ✅ **Bouton de rafraîchissement des chaînes** dans le panel admin (Super Admin uniquement)
+- ✅ **Endpoint API** `/api/admin/channels/refresh` pour rafraîchir manuellement
+- ✅ **Endpoint API** `/api/admin/channels/stats` pour obtenir les statistiques IPTV
+- ✅ **Affichage des statistiques IPTV** dans le dashboard (chaînes, films, séries, token)
+- ✅ **Logs** pour chaque rafraîchissement manuel
+- ✅ **Messages de confirmation** avant rafraîchissement
+- ✅ **Indicateur de progression** pendant le rafraîchissement
+- ✅ **Documentation complète** dans `FEATURE_REFRESH_CHANNELS.md`
+
+### Modifié
+- ✅ `server.py` : Ajout des endpoints de rafraîchissement et statistiques
+- ✅ `admin_panel.py` : Ajout du bouton et de la fonction JavaScript
+
+### Fonctionnalités
+- 🔄 Rafraîchissement manuel des chaînes Vavoo (Live + VOD)
+- 📊 Affichage en temps réel des statistiques IPTV
+- 🔒 Accès réservé aux Super Admins
+- ⏱️ Durée : 1-2 minutes
+- 📝 Enregistrement dans les logs
+
 ## [1.1.0] - Préparation pour Render
 
 ### Ajouté

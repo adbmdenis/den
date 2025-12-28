@@ -1,0 +1,72 @@
+═══════════════════════════════════════════════════════════════════
+  FICHIERS À RÉCUPÉRER POUR CRÉER UN NOUVEAU PROJET IPTV
+═══════════════════════════════════════════════════════════════════
+
+🎯 SOLUTION LA PLUS SIMPLE:
+
+   Utilisez le fichier ZIP prêt à l'emploi:
+   
+   📦 iptv_package_20251228.zip (44 KB)
+   
+   Ce fichier contient TOUS les fichiers essentiels.
+   Il suffit de l'extraire dans un nouveau dossier!
+
+═══════════════════════════════════════════════════════════════════
+
+📋 FICHIERS ESSENTIELS (11 fichiers minimum):
+
+   1. server.py              ← Le plus important!
+   2. config.py
+   3. database.py
+   4. admin_panel.py
+   5. vavoo_service.py
+   6. multi_service.py
+   7. .env.example
+   8. requirements.txt
+   9. .gitignore
+   10. start.bat
+   11. start.sh
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 INSTALLATION EN 5 ÉTAPES:
+
+   1. Extraire le ZIP ou copier les 11 fichiers
+   
+   2. Créer le fichier .env:
+      copy .env.example .env
+   
+   3. Éditer .env (changer les mots de passe):
+      notepad .env
+   
+   4. Installer les dépendances:
+      pip install -r requirements.txt
+   
+   5. Démarrer le serveur:
+      python server.py
+
+═══════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION COMPLÈTE:
+
+   Pour plus de détails, consultez:
+   
+   📖 FICHIERS_A_RECUPERER.md    ← Liste détaillée
+   📖 GUIDE_REUTILISATION.md     ← Guide complet
+   📖 RESUME_FICHIERS.txt        ← Résumé visuel
+
+═══════════════════════════════════════════════════════════════════
+
+✅ RÉSULTAT:
+
+   Vous obtiendrez un serveur IPTV complet avec:
+   
+   ✓ 8873+ chaînes IPTV live
+   ✓ Panel d'administration web
+   ✓ Gestion des clients et abonnements
+   ✓ API Xtream Codes
+   ✓ Compatible IPTV Smarters Pro
+
+═══════════════════════════════════════════════════════════════════
+
+Date: 28 décembre 2025
