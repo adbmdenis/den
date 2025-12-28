@@ -133,3 +133,4 @@ TOKEN_REFRESH_INTERVAL = 900  # 15 minutes
 - `GET /get.php?username=X&password=Y` - Playlist M3U
 - `GET /playlist.m3u?token=X` - Playlist avec token
 # iptv
+# iptv
