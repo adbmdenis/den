@@ -1,147 +1,271 @@
-# Plateforme IPTV - Gestion des Abonnements
+# 🎬 Serveur IPTV - Système de Gestion
 
-## 🚀 Démarrage rapide
+Système complet de gestion IPTV avec panel d'administration, gestion des clients, ventes et génération de playlists M3U.
 
-### En local
+## 🚀 Fonctionnalités
+
+- ✅ **Panel d'administration** - Interface web complète
+- ✅ **Gestion des clients** - CRUD complet (Créer, Lire, Modifier, Supprimer)
+- ✅ **Gestion des ventes** - Suivi des abonnements
+- ✅ **Génération M3U** - Playlists personnalisées par client
+- ✅ **Multi-services** - Support de plusieurs sources IPTV
+- ✅ **Authentification** - Système de tokens sécurisé
+- ✅ **Base de données** - SQLite intégrée
+- ✅ **API REST** - Endpoints complets
+
+## 📋 Prérequis
+
+- Python 3.8+
+- pip (gestionnaire de paquets Python)
+
+## 🔧 Installation
+
+### 1. Cloner le dépôt
+
 ```bash
-cd serveur_iptv
+git clone https://github.com/adbmdenis/den.git
+cd den
+```
+
+### 2. Installer les dépendances
+
+```bash
+pip install flask requests
+```
+
+### 3. Configuration
+
+Éditer `config.py` pour configurer:
+- Identifiants superadmin
+- Port du serveur
+- Paramètres de la base de données
+
+```python
+# Exemple de configuration
+SUPER_ADMIN_USERNAME = "superadmin"
+SUPER_ADMIN_PASSWORD = "Super@2024!"
+SERVER_PORT = 8888
+```
+
+### 4. Démarrer le serveur
+
+```bash
 python server.py
 ```
 
-### Sur Render (Production)
-Voir le guide complet dans [DEPLOY.md](DEPLOY.md)
+Le serveur démarre sur `http://localhost:8888`
 
-**Déploiement en 1 clic :**
-1. Poussez votre code sur GitHub
-2. Connectez votre dépôt à Render
-3. Render détecte automatiquement `render.yaml`
-4. Votre serveur est en ligne ! 🎉
+## 🌐 Accès au Panel Admin
 
-## 📍 URLs
+**URL:** http://localhost:8888/login
 
-| Page | URL |
-|------|-----|
-| Accueil | http://192.168.1.19:8888/ |
-| Panel Admin | http://192.168.1.19:8888/admin |
-| Espace Client | http://192.168.1.19:8888/client |
+**Identifiants par défaut:**
+- Username: `superadmin`
+- Password: `Super@2024!`
 
-## 🔐 Identifiants Super Admin
+⚠️ **Important:** Changez le mot de passe après la première connexion!
 
-- **Username:** `superadmin`
-- **Password:** `Super@2024!`
-
-## 👥 Rôles et Permissions
-
-### Super Admin
-- Accès total à la plateforme
-- Créer/modifier/supprimer des vendeurs
-- Définir les quotas par vendeur (types d'abonnements autorisés, quantités, prix)
-- Gérer les types d'abonnements (1 mois, 3 mois, 6 mois, 12 mois)
-- Importer des lignes IPTV
-- Voir toutes les ventes et statistiques
-- Annuler/suspendre des abonnements
-
-### Vendeur (Admin)
-- Créer des clients
-- Vendre des abonnements (selon ses quotas)
-- Voir son historique de ventes
-- Gérer ses clients
-
-### Client
-- Se connecter à l'espace client
-- Voir son abonnement actif
-- Obtenir ses identifiants IPTV
-- Voir la date d'expiration
-
-## 📺 Configuration IPTV Smarters Pro
-
-**Type:** Xtream Codes API
-
-| Paramètre | Valeur |
-|-----------|--------|
-| Server URL | `http://192.168.1.19:8888` |
-| Username | Votre nom d'utilisateur |
-| Password | Votre mot de passe |
-
-**URL M3U directe:**
-```
-http://192.168.1.19:8888/get.php?username=USER&password=PASS
-```
-
-Ou avec token:
-```
-http://192.168.1.19:8888/playlist.m3u?token=VOTRE_TOKEN
-```
-
-## 💰 Types d'abonnements par défaut
-
-| Type | Durée | Prix |
-|------|-------|------|
-| 1_mois | 30 jours | 5.00 € |
-| 3_mois | 90 jours | 12.00 € |
-| 6_mois | 180 jours | 20.00 € |
-| 12_mois | 365 jours | 35.00 € |
-
-## 💳 Méthodes de paiement
-
-- Espèces
-- Mobile Money
-- Carte bancaire
-- Manuel
-
-## 🔒 Sécurité
-
-- Authentification par token JWT-like
-- Hashage des mots de passe (SHA256)
-- Blocage après 5 tentatives de connexion (15 min)
-- Logs de toutes les actions
-- Contrôle des connexions simultanées par client
-
-## 📁 Structure des fichiers
+## 📁 Structure du Projet
 
 ```
 serveur_iptv/
-├── server.py          # Serveur HTTP principal
-├── database.py        # Gestion SQLite
-├── admin_panel.py     # Interface web
-├── vavoo_service.py   # Service VAVOO (tokens/chaînes)
-├── config.py          # Configuration
-├── database.db        # Base de données SQLite
-└── README.md          # Documentation
+├── server.py              # Serveur principal
+├── admin_panel.py         # Panel d'administration
+├── database.py            # Gestion base de données
+├── multi_service.py       # Gestion multi-services IPTV
+├── config.py              # Configuration
+├── database.db            # Base de données SQLite
+├── README.md              # Ce fichier
+└── docs/
+    ├── GUIDE_HEBERGEMENT.md      # Guide d'hébergement
+    ├── COMPARAISON_HEBERGEURS.txt # Comparaison hébergeurs
+    ├── ACCES_RAPIDE.txt          # Accès rapide
+    └── STATUS_FINAL.md           # Statut du projet
 ```
 
-## ⚙️ Configuration (config.py)
-
-```python
-SERVER_PORT = 8888
-SUPER_ADMIN_USERNAME = "superadmin"
-SUPER_ADMIN_PASSWORD = "Super@2024!"
-TOKEN_REFRESH_INTERVAL = 900  # 15 minutes
-```
-
-## 📊 API Endpoints
+## 🔌 API Endpoints
 
 ### Authentification
-- `POST /api/login` - Login admin
-- `POST /api/client/login` - Login client
+- `POST /api/login` - Connexion admin
 
-### Admin API
-- `GET /api/admin/stats` - Statistiques
-- `GET /api/admin/clients` - Liste clients
-- `GET /api/admin/admins` - Liste vendeurs (super admin)
-- `GET /api/admin/sales` - Historique ventes
-- `POST /api/admin/clients/create` - Créer client
-- `POST /api/admin/sell` - Vendre abonnement
-- `POST /api/admin/admins/create` - Créer vendeur
-- `POST /api/admin/quotas/set` - Définir quotas
+### Clients
+- `GET /api/clients` - Liste des clients
+- `POST /api/clients/create` - Créer un client
+- `PUT /api/clients/update` - Modifier un client
+- `DELETE /api/clients/delete` - Supprimer un client
 
-### Client API
-- `GET /api/client/me` - Infos client
-- `GET /api/client/subscriptions` - Abonnements
+### Ventes
+- `GET /api/sales` - Liste des ventes
+- `POST /api/sales/create` - Créer une vente
 
-### Playlist
-- `GET /get.php?username=X&password=Y` - Playlist M3U
-- `GET /playlist.m3u?token=X` - Playlist avec token
-# iptv
-# iptv
+### Administrateurs
+- `GET /api/admins` - Liste des admins
+- `POST /api/admins/create` - Créer un admin
+
+### Statistiques
+- `GET /api/stats` - Statistiques globales
+
+### Playlists
+- `GET /playlist/<client_id>` - Playlist M3U du client
+
+## 🛠️ Scripts Utiles
+
+### Test de connexion
+```bash
+python test_login_simple.py
+```
+
+### Réinitialiser le mot de passe superadmin
+```bash
+python fix_superadmin_password.py
+```
+
+### Test d'intégration
+```bash
+python test_admin_integration.py
+```
+
+### Redémarrer le serveur (Windows)
+```bash
+REDEMARRER_MAINTENANT.bat
+```
+
+## 🚀 Déploiement en Production
+
+Consultez le guide complet: [GUIDE_HEBERGEMENT.md](GUIDE_HEBERGEMENT.md)
+
+### Hébergeurs Recommandés
+
+1. **Contabo VPS S** - 5€/mois (Meilleur rapport qualité/prix)
+2. **Hetzner CX31** - 9.50€/mois (Plus fiable)
+3. **OVH VPS Value** - 7€/mois (Support français)
+
+### Déploiement Rapide
+
+```bash
+# Sur le serveur
+git clone https://github.com/adbmdenis/den.git
+cd den
+pip install flask requests
+python server.py
+```
+
+Pour un déploiement complet avec Nginx, SSL, et systemd, consultez le guide d'hébergement.
+
+## 🔒 Sécurité
+
+### Recommandations
+
+- ✅ Changez les identifiants par défaut
+- ✅ Utilisez HTTPS en production
+- ✅ Configurez un firewall (UFW)
+- ✅ Installez Fail2Ban
+- ✅ Faites des sauvegardes régulières
+- ✅ Mettez à jour régulièrement
+
+### Configuration Firewall
+
+```bash
+sudo ufw allow 22/tcp    # SSH
+sudo ufw allow 80/tcp    # HTTP
+sudo ufw allow 443/tcp   # HTTPS
+sudo ufw enable
+```
+
+## 📊 Monitoring
+
+### Voir les logs
+```bash
+# Logs du serveur
+tail -f logs/server.log
+
+# Logs système (si service systemd)
+sudo journalctl -u iptv -f
+```
+
+### Monitoring des ressources
+```bash
+# CPU et RAM
+htop
+
+# Connexions réseau
+netstat -tulpn | grep 8888
+```
+
+## 🐛 Dépannage
+
+### Problème: Boutons ne fonctionnent pas
+**Solution:** Redémarrer le serveur
+```bash
+# Windows
+REDEMARRER_MAINTENANT.bat
+
+# Linux
+sudo systemctl restart iptv
+```
+
+### Problème: Login échoue (401)
+**Solution:** Synchroniser le mot de passe
+```bash
+python fix_superadmin_password.py
+```
+
+### Problème: Base de données corrompue
+**Solution:** Réinitialiser la base
+```bash
+# Sauvegarder l'ancienne
+cp database.db database.db.backup
+
+# Supprimer et redémarrer (créera une nouvelle DB)
+rm database.db
+python server.py
+```
+
+## 📚 Documentation
+
+- [Guide d'hébergement complet](GUIDE_HEBERGEMENT.md)
+- [Comparaison des hébergeurs](COMPARAISON_HEBERGEURS.txt)
+- [Accès rapide](ACCES_RAPIDE.txt)
+- [Statut du projet](STATUS_FINAL.md)
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues! N'hésitez pas à:
+- Signaler des bugs
+- Proposer des améliorations
+- Soumettre des pull requests
+
+## 📝 Changelog
+
+### Version 1.0.0 (Décembre 2025)
+- ✅ Panel d'administration complet
+- ✅ Gestion des clients et ventes
+- ✅ Génération de playlists M3U
+- ✅ Authentification sécurisée
+- ✅ API REST complète
+- ✅ Documentation complète
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+## 👤 Auteur
+
+**Denis ADBM**
+- GitHub: [@adbmdenis](https://github.com/adbmdenis)
+
+## 🙏 Remerciements
+
+Merci à tous ceux qui ont contribué à ce projet!
+
+## 📞 Support
+
+Pour toute question ou problème:
+1. Consultez la documentation
+2. Vérifiez les issues GitHub
+3. Créez une nouvelle issue si nécessaire
+
+---
+
+**⭐ Si ce projet vous aide, n'hésitez pas à lui donner une étoile sur GitHub!**
 # den
