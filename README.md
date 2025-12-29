@@ -144,3 +144,4 @@ TOKEN_REFRESH_INTERVAL = 900  # 15 minutes
 - `GET /playlist.m3u?token=X` - Playlist avec token
 # iptv
 # iptv
+# den
