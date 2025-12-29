@@ -23,14 +23,15 @@ wheels/
 .installed.cfg
 *.egg
 
-# Base de données
+# Database
 *.db
 *.sqlite
 *.sqlite3
+database.db
 
-# Variables d'environnement
-.env
-.env.local
+# Logs
+*.log
+logs/
 
 # IDE
 .vscode/
@@ -43,5 +44,20 @@ wheels/
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# Environment variables
+.env
+.env.local
+
+# Backup files
+*.backup
+*.bak
+backup-*
+
+# Test files
+test_*.py
+debug_*.py
+
+# Temporary files
+*.tmp
+temp/
+tmp/
